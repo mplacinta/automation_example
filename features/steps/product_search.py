@@ -19,7 +19,7 @@ def input_search(context, search_word):
     search = context.driver.find_element(*SEARCH_INPUT)
     search.clear()
     search.send_keys(search_word)
-    sleep(4)
+    sleep(2)
 
 
 @when('Click on search icon')
