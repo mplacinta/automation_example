@@ -8,7 +8,7 @@ Feature: Test Scenarios for Search functionality
 
   Scenario: User can open dresses page
     Given Open Gojane page
-    When Click ont DRESSES link
+    When Click on DRESSES link
     Then Top navigation is All Dresses
 
   Scenario: User can open clothing page
