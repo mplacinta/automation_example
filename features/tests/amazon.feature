@@ -7,3 +7,8 @@ Feature: Solution search
     When Input Cancel order into Amazon more solutions field
     And Click the Go button
     Then Cancel Items or Orders text is present
+
+  Scenario: Verify sign in page is open when clicking orders if not signed in
+    Given Open Amazon page
+    And Click Orders link on Amazon
+    Then Sign in page open
