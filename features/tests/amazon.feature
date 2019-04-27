@@ -22,3 +22,9 @@ Feature: Solution search
     Then  Click on the closing X of the menu
     And Click on Try Prime from Amazon logo
     Then TRY PRIME button is present
+
+
+  Scenario: Verify 4 benefits cards are displayed on Amazon Prime Page
+    Given Open Amazon page
+    And Click Try Prime
+    Then Verify 4 prime benefits cards are shown

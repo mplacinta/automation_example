@@ -24,6 +24,11 @@ def click_search_icon(context, hamburger):
     context.driver.find_element(By.XPATH, "//i[@class='hm-icon nav-sprite']").click()
 
 
+@given('Click Try Prime')
+def click_search_icon(context):
+    context.driver.find_element(By.CLASS_NAME, 'nav-prime-try').click()
+
+
 @when('Input {text} into Amazon more solutions field')
 def input_query(context, text):
     el = context.driver.find_element(By.ID, 'helpsearch')
@@ -68,3 +73,10 @@ def verify_result_present(context, text):
 @then('Sign in page open')
 def verify_signin_page_open(context):
     assert 'https://www.amazon.com/ap/signin' in context.driver.current_url
+
+
+@then('Verify 4 prime benefits cards are shown')
+def verify_result_present(context):
+    cards = context.driver.find_elements(By.XPATH, "//div[@id='prime-benefit-cards']/div")
+    print(cards)
+    assert len(cards) == 4, 'Expected benefits card shown is 4, but get {}'. format(len(cards))
